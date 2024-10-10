@@ -53,7 +53,7 @@ const quotes = [
         author: "Terra og Nøytral"
     }, {
         quote:
-            "Hvilken spenning måles mellom fase og fase i TN-nett distribusjonsnett?",
+            "Hvilken spenning måles mellom fase og fase i TN-nett?",
         author: "400V"
     }, {
         quote:
@@ -61,11 +61,11 @@ const quotes = [
         author: "133V"
     }, {
         quote:
-            "Hvilken spenning måles mellom fase og null i TN-nett distribusjonsnett?",
+            "Hvilken spenning måles mellom fase og null i TN-nett?",
         author: "230V"
     }, {
         quote:
-            "Hvilken spenning måles mellom null og jord i TN-nett distribusjonsnett?",
+            "Hvilken spenning måles mellom null og jord i TN-nett?",
         author: "0V"
     }, {
         quote:
@@ -169,11 +169,11 @@ const quotes = [
         author: "Ja, så lenge man benytter automatisk utkobling som beskyttelsesmetode"
     }, {
         quote:
-            "Hvilken tabell i NEK400 gir oversikt over installasjonsmetoder?",
+            "Hvilken tabell i NEK400 handler om installasjonsmetoder?",
         author: "Tabell 52A"
     }, {
         quote:
-            "Hvilken tabell i NEK400 gir oversikt over ulike kablers strømføringsevner?",
+            "I vilken tabell i NEK400 finner du ulike kablers strømføringsevner?",
         author: "Tabell 52B"
     }, {
         quote:
@@ -269,7 +269,7 @@ const quotes = [
         author: "På tampen av stikkledningen"
     }, {
         quote:
-            "Hvilken tabell i montørhåndboka kan du finne jordelektrodens omtrentlige overgangsmotstand til jord?",
+            "I hvilken tabell i montørhåndboka kan du finne jordelektrodens omtrentlige overgangsmotstand til jord?",
         author: "Tabell side 53"
     }, {
         quote:
@@ -313,7 +313,7 @@ const quotes = [
         author: "NEK400.701"
     },  {
         quote:
-            "Hvilet kapittel i NEK400 handler om boliginstallasjoner?",
+            "Hvilket kapittel i NEK400 handler om boliginstallasjoner?",
         author: "NEK400.823"
     },  {
         quote:
