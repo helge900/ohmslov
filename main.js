@@ -7,6 +7,11 @@ const quotes = [
     },
     {
         quote:
+            "Hva heter forskriften som elektriske anlegg skal bygges etter?",
+        author: "FEL - Forskrift for elektriske lavspenningsanlegg"
+    },
+    {
+        quote:
             "Hva står FEL for?",
         author: "Forskrift for elektriske lavspenningsanlegg"
     },
