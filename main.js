@@ -364,11 +364,7 @@ const quotes = [
         quote:
             "Hva er 'de fem sikre'?",
         author: "Det er et sett med standarisert dokumentasjon som skal tilfredstille gjeldende krav."
-    },  {
-        quote:
-            "Er det lov å bruke Plejd på fagprøven?",
-        author: "Tja.."
-    }, 
+    },  
 ];
 
 //Button Generate Quotes
