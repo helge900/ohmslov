@@ -327,7 +327,7 @@ const quotes = [
     },  {
         quote:
             "Hva er kravet til IP-grad til elbilladere?",
-        author: "IP54"
+        author: "IP44"
     },  {
         quote:
             "Hva kan du finne i NEK400 del 6?",
