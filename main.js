@@ -3,7 +3,7 @@ const quotes = [
     { 
         quote:
              "Hva er forskjellen mellom en lov, en forskrift og en standard?",
-        author: "En lov er vedtatt av stortinget, en forskrift er vedtatt av regjerningen, og en standard er utformet av bransjen."
+        author: "En lov er vedtatt av Stortinget, en forskrift er vedtatt av regjeringen, og en standard er utformet av bransjen."
     },
     {
         quote:
@@ -157,7 +157,7 @@ const quotes = [
         author: "Den måler at den får samme strøm tilbake som den slipper gjennom. Ved avvik tyder det på jordfeil, og vernet løser ut."
     }, {
          quote:
-            "Hva er kravet til utløserstrøm for jordfeilvern installert i bolig?'",
+            "Hva er kravet til utløserstrøm for jordfeilvern installert i bolig?",
         author: "30mA"
     }, {
         quote:
@@ -173,7 +173,7 @@ const quotes = [
         author: "Tabell 52A"
     }, {
         quote:
-            "I vilken tabell i NEK400 finner du ulike kablers strømføringsevner?",
+            "I hvilken tabell i NEK400 finner du ulike kablers strømføringsevner?",
         author: "Tabell 52B"
     }, {
         quote:
@@ -302,7 +302,7 @@ const quotes = [
     },  {
         quote:
             "Stilles det strengest krav til sone 0 eller sone 2 på bad?",
-        author: "Soe 0 er strengest"
+        author: "Sone 0 er strengest"
     },  {
         quote:
             "Er det lov å montere stikkontakter i dysjen?",
@@ -350,7 +350,7 @@ const quotes = [
     },  {
         quote:
             "Hva er en samsvarserklæring?",
-        author: "Det er en garanti om at det elektriske anlegget er bygget i helhold til gjeldende regelverk"
+        author: "Det er en garanti om at det elektriske anlegget er bygget i henhold til gjeldende regelverk"
     },  {
         quote:
             "Hva består 'de fem sikre' av?",
