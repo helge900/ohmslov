@@ -383,4 +383,3 @@ btn.addEventListener('click', () => {
     document.querySelector('.author').innerText = quotes[random].author;
 
 });
-
