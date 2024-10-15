@@ -278,7 +278,7 @@ const quotes = [
         author: "Tabell side 53"
     }, {
         quote:
-            "Hvilken tabell i NEK400 angir anbefalte verdier for spenningsfall??",
+            "Hvilken tabell i NEK400 angir anbefalte verdier for spenningsfall?",
         author: "Tabell 52F"
     }, {
         quote:
