@@ -35,8 +35,12 @@ const quotes = [
     },
     {
         quote:
-            "Hva står forkortelsen FSE for?",
-        author: "Forskrift om sikkerhet ved arbeid i og drift av elektriske anlegg"
+            "Hva er forkortelsen vi ofte bruker for forskrift om sikkerhet ved arbeid i og drift av elektriske anlegg?",
+        author: "FSE"
+    },  {
+        quote:
+            "Hvor ofte skal man ha FSE-kurs?",
+        author: "Minimum hver 12 måned"
     },
     {
         quote:
