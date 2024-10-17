@@ -40,7 +40,7 @@ const quotes = [
     },  {
         quote:
             "Hvor ofte skal man ha FSE-kurs?",
-        author: "Minimum hver 12 måned"
+        author: "Minimum hver 12. måned"
     },
     {
         quote:
@@ -50,7 +50,7 @@ const quotes = [
     {
         quote:
             "Hva sier FSE §14 at du må gjøre før du begynner å jobbe på et frakoblet anlegg?",
-        author: "Koble fra, sikre mot innkobling og måle."
+        author: "Koble fra, sikre mot innkobling, og måle."
     },
     {
         quote:
@@ -74,20 +74,12 @@ const quotes = [
         author: "133V"
     }, {
         quote:
-            "Hvilken spenning måles mellom fase og null i TN-nett?",
+            "Hvilken spenning måles mellom fase og nøytral i TN-nett?",
         author: "230V"
     }, {
         quote:
-            "Hvilken spenning måles mellom null og jord i TN-nett?",
+            "Hvilken spenning måles mellom nøytral og jord i TN-nett?",
         author: "0V"
-    }, {
-        quote:
-            "I hvilket nettsystem kan man oppnå lavest berøringsspenning ved jordfeil?",
-        author: "It-nett"
-    }, {
-        quote:
-            "Hva skjer ved en jordfeil i TN-nett?",
-        author: "Kortslutning, vernet løser ut"
     }, {
         quote:
             "Hva er fordelene med å bytte fra IT-nett til TN-nett?",
@@ -106,10 +98,6 @@ const quotes = [
         author: "En jordingsleder som skaper kontakt med jorden og jordingsanlegget."
     }, {
         quote:
-            "Hva skal jordes via utjevningsforbindelser?",
-        author: "Annen ledende deler, primært metalliske rør inn og ut av bygget og ledende deler av bygningskonstruksjonen."
-    }, {
-        quote:
             "Hva er en utsatt ledende del?",
         author: "Del av metall til utstyr som er en del av det elektriske anlegget, men som normalt ikke er spenningssatt. For eksempel dekselet på en panelovn."
     }, {
@@ -123,7 +111,7 @@ const quotes = [
     }, {
         quote:
             "Hvor mange ampere angir den øvre grensen for tilknytning metode A?",
-        author: "80-125A"
+        author: "125A"
     }, {
         quote:
             "Hvor mange felter skal et tilknytningsskap minimum ha? Og hva hører til i disse feltene?",
@@ -135,7 +123,7 @@ const quotes = [
     }, {
         quote:
             "Hvilke vern skal plasseres i feltet for elkraft?",
-        author: "Kortslutningsvern og overspenningsvern"
+        author: "Kortslutningsvern, overspenningsvern og overstrømsvern (avgreining eller utvidete tilknytningsskap)"
     }, {
         quote:
             "Skal tilknytningsskap bygget etter metode A være utformet for ussakkyndig betjening?",
