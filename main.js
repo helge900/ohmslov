@@ -9,6 +9,10 @@ const quotes = [
         quote:
             "Hva heter forskriften som elektriske anlegg skal bygges etter?",
         author: "FEL - Forskrift for elektriske lavspenningsanlegg"
+    },    {
+        quote:
+            "Hvilke standarder og forskrifter må følges ved utførelse av elektriske anlegg?",
+        author: "FEL og NEK400"
     },
     {
         quote:
@@ -272,34 +276,22 @@ const quotes = [
         quote:
             "På hvilket punkt i installasjonen gjelder everkets oppgitte kortslutningsverdier?",
         author: "På tampen av stikkledningen"
-    }, {
+    },  {
         quote:
-            "I hvilken tabell i montørhåndboka kan du finne jordelektrodens omtrentlige overgangsmotstand til jord?",
-        author: "Tabell side 53"
-    }, {
-        quote:
-            "Hvilken tabell i NEK400 angir anbefalte verdier for spenningsfall?",
-        author: "Tabell 52F"
+            "Vil spenningsfallet være størst dersom det går mye eller lite strøm i kretsen?",
+        author: "Det vil være større dersom det går mye strøm i kretsen."
     }, {
         quote:
             "Hva er anbefalt maksimalt spenningsfall i prosent for en forbrukerkurs?",
         author: "5%"
     }, {
         quote:
-            "Hva er anbefalt maksimalt spenningsfall i prosent for en belysningskurs?",
-        author: "3%"
-    }, {
-        quote:
             "Hvilke spesielle krav gjelder for stikkontakt for platetopp i en bolig?",
-        author: "Komfyrvakt"
+        author: "Det må monteres komfyrvakt"
     }, {
         quote:
             "Hvilke krav gjelder for tilkobling av varmtvannsberedere i bolig?",
-        author: "Fast tilkoblet eller via rundstift plugg og kontakt"
-    }, {
-        quote:
-            "Hvilken tabell i montørhåndboka kan du finne jordelektrodens omtrentlige overgangsmotstand til jord?",
-        author: "Tabell side 53"
+        author: "I bolig skal varmtvannsberedere over 1500W skal være fast tilkoblet eller via rundstift plugg og kontakt"
     }, {
         quote:
             "Regnes området rundt vask på bad som våtsone av NEK400?",
@@ -310,11 +302,11 @@ const quotes = [
         author: "Sone 0 er strengest"
     },  {
         quote:
-            "Er det lov å montere stikkontakter i dysjen?",
+            "Er det lov å montere stikkontakter i dusjen?",
         author: "Nei"
     },  {
         quote:
-            "Hvilket kapittel i NEK400 handler om områder med dysj?",
+            "Hvilket kapittel i NEK400 handler om områder med dusj?",
         author: "NEK400.701"
     },  {
         quote:
@@ -331,7 +323,7 @@ const quotes = [
     },  {
         quote:
             "Hva kan du finne i NEK400 del 6?",
-        author: "Krav til sluttkontroll/verifikasjon"
+        author: "Verifikasjon (sluttkontroll)"
     },  {
         quote:
             "Hvilken måling skal utføres først: kontinuitetsmåling eller isolasjonsmåling?",
@@ -344,6 +336,14 @@ const quotes = [
         quote:
             "Hva måler du når du foretar en isolasjonsmåling?",
         author: "Man måler om det er lekkasje fra faseledere til jord"
+    }, {
+        quote:
+            "Hvordan utføres en kontinuitetsmåling i praksis?",
+        author: "Man fester en måleledning (ofte en PN-snelle) til jordingskinnen i fordelingen, drar denne med seg rundt i installasjonen, og måler motstanden mellom denne og jordingspunktene i installasjonen."
+    },  {
+        quote:
+            "Hva utføres en isolasjonsmåling i praksis?",
+        author: "Man fester den ene målepinnen på jordingsskinnen, og den andre på fasen. Måle med 500V målespenning. Det skal måles mellom alle faser og jord. Koble fra overspenningsvern og ømfintlig utstyr i innstallasjonen."
     },  {
         quote:
             "Hva er kravet til kontinuitetsmåling?",
@@ -352,6 +352,10 @@ const quotes = [
         quote:
             "Hva er kravet til isolasjonsmåling?",
         author: "Mer enn 1MΩ"
+    }, {
+        quote:
+            "Hva er kravet til målespenning ved en isolasjonsmåling av 230V anlegg?",
+        author: "500V"
     },  {
         quote:
             "Hva er en samsvarserklæring?",
@@ -363,7 +367,7 @@ const quotes = [
     },  {
         quote:
             "Hva er 'de fem sikre'?",
-        author: "Det er et sett med standarisert dokumentasjon som skal tilfredstille gjeldende krav."
+        author: "Det er et sett med standarisert dokumentasjon som tilfredstiller gjeldende krav til dokumentasjon."
     },  
 ];
 
