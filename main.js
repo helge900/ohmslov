@@ -83,7 +83,7 @@ const quotes = [
     }, {
         quote:
             "Hva er fordelene med å bytte fra IT-nett til TN-nett?",
-        author: "Bl.a. høyere effekt på samme tversnitt, mer brannsikkert, mindre stående jordfeiler, både 400V og 230V tilgjengelig."
+        author: "Bl.a. høyere effekt på samme tverrsnitt, mer brannsikkert, mindre stående jordfeiler, både 400V og 230V tilgjengelig."
     }, {
         quote:
             "Hvor skal PEN-leder splittes?",
@@ -339,7 +339,7 @@ const quotes = [
     },  {
         quote:
             "Hva er kravet til kontinuitetsmåling?",
-        author: "Kravet er at det skal være samsvar mellom målt verdi, og lederens lengde og tversnitt."
+        author: "Kravet er at det skal være samsvar mellom målt verdi, og lederens lengde og tverrsnitt."
     },  {
         quote:
             "Hva er kravet til isolasjonsmåling?",
