@@ -134,11 +134,11 @@ const quotes = [
         author: "Det er spenningsnivået som gjør at overspenningsvernet åpner forbindelse til jord."
     }, {
         quote:
-            "Hva er kravet til minimum tennspenning på overspenningsvern i IT-nett?",
+            "Hva er kravet til minimum driftspenning på overspenningsvern i IT-nett?",
         author: "350V"
     }, {
         quote:
-            "Hva er kravet til overspenningsvernets tennspenning i TN-nett?",
+            "Hva er kravet til overspenningsvernets driftspenning i TN-nett?",
         author: "1,1 * 230V"
     }, {
         quote:
