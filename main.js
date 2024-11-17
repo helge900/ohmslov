@@ -127,7 +127,7 @@ const quotes = [
     }, {
         quote:
             "Skal tilknytningsskap bygget etter metode A være utformet for ussakkyndig betjening?",
-        author: "Ja"
+        author: "Ja, i henhold til NEK399"
     }, {
         quote:
             "I forbindelse med overspenningsvern; hva menes med tennspenning?",
@@ -179,7 +179,7 @@ const quotes = [
     }, {
         quote:
             "Er en PR-kabel en dobbelisolert kabel?",
-        author: "Nei"
+        author: "Nei, dobbelisolerte kabler har isolert jordleder"
     }, {
         quote:
             "Hvilken ref.inst.metode er kabel klamret på vegg?",
@@ -219,7 +219,7 @@ const quotes = [
     }, {
         quote:
             "Er man absolutt nødt til å alltid bruke jordfeilbryter?",
-        author: "Nei"
+        author: "Nei, man kan blant annet velge en annen beskyttelsesmetode mot elektrisk sjokk, f.eks. dobbel/forsterket isolasjon, elektrisk adskillelse eller lav-volt (SELV/PELV)."
     }, {
         quote:
             "Hvorfor skal som regel målersløyfen i IT-nett dobbelisoleres?",
@@ -239,7 +239,7 @@ const quotes = [
     }, {
         quote:
             "Er PFXP en dobbelisolert kabel?",
-        author: "Ja"
+        author: "Ja, kabler med isolert jordleder er dobbelisolert"
     }, {
         quote:
             "Hva er kravet til beskyttelse mot overbelastning i bolig?",
@@ -287,7 +287,7 @@ const quotes = [
     }, {
         quote:
             "Regnes området rundt vask på bad som våtsone av NEK400?",
-        author: "Nei"
+        author: "Nei, området rundt vask regnes ikke som våtsone av NEK400, men det gjør det derimot av byggeteknisk forskrift (TEK17)."
     },  {
         quote:
             "Stilles det strengest krav til sone 0 eller sone 2 på bad?",
@@ -295,7 +295,7 @@ const quotes = [
     },  {
         quote:
             "Er det lov å montere stikkontakter i dusjen?",
-        author: "Nei"
+        author: "Nei, stikkontakter kan i utgangspunktet utelukkende monteres utenfor våtsoner."
     },  {
         quote:
             "Hvilket kapittel i NEK400 handler om områder med dusj?",
