@@ -33,11 +33,32 @@ const quotes = [
             "Hvilken del i NEK400 omhandler sluttkontroll og verifikasjon? ",
         author: "Del 6"
     },
+     {
+        quote:
+            "Hva omhandler del 6 i Nek400? ",
+        author: "Verifikasjon"
+    },
+     {
+        quote:
+            "Hva omhandler del 7 i NEK400?",
+        author: "Krav til spesielle installasjoner, for eksempel bad, lading av elbil og landbruksinstallasjoner."
+    },
+     {
+        quote:
+            "Hvilke deler i NEK400 omhandler krav til spesielle installasjoner? ",
+        author: "Del 7 og del 8"
+    },
     {
         quote:
             "Hva er forkortelsen vi ofte bruker for forskrift om sikkerhet ved arbeid i og drift av elektriske anlegg?",
         author: "FSE"
-    },  {
+    }, 
+     {
+        quote:
+            "Hva står FSE for? ",
+        author: "Forskrift om sikkerhet ved arbeid i og drift av elektriske anlegg"
+    },
+    {
         quote:
             "Hvor ofte skal man ha FSE-kurs?",
         author: "Minimum hver 12. måned"
@@ -106,6 +127,10 @@ const quotes = [
         author: "NEK 399"
     }, {
         quote:
+            "Hva er NEK399?",
+        author: "En standard som gjelder for tilknytning av elektriske lavspenningsanlegg"
+    }, {
+        quote:
             "Hvilken metode for tilknytning gjelder som oftest for boliger?",
         author: "Metode A"
     }, {
@@ -132,6 +157,14 @@ const quotes = [
         quote:
             "I forbindelse med overspenningsvern; hva menes med tennspenning?",
         author: "Det er spenningsnivået som gjør at overspenningsvernet åpner forbindelse til jord."
+    }, {
+        quote:
+            "Hvordan fungerer et overspenningsvern (enkelt forklart)?",
+        author: "Dersom spenningen stiger over et visst nivå, åpner overspenningsvernet en forbindelse til jord."
+    }, {
+        quote:
+            "Hva forsårsaker overspenninger?",
+        author: "Lyn (atmosfæriske overspenninger), og inn- og utkobling av store belastninger (koblingsoverspenninger)."
     }, {
         quote:
             "Hva er kravet til minimum driftspenning på overspenningsvern i IT-nett?",
@@ -178,6 +211,10 @@ const quotes = [
         author: "Tabell 52B"
     }, {
         quote:
+            "Hva kan du finne i NEK400 tabell 52B?",
+        author: "Strømføringsevner"
+    }, {
+        quote:
             "Er en PR-kabel en dobbelisolert kabel?",
         author: "Nei, dobbelisolerte kabler har isolert jordleder"
     }, {
@@ -200,6 +237,10 @@ const quotes = [
         quote:
             "Hvilken tabell i NEK400 angir klassifiseringer for omgivelser/ytre påvirkninger?",
         author: "Tabell 51A"
+    }, {
+        quote:
+            "Hva kan du finne i NEK400 tabell 51A?",
+        author: "Klassifiseringer for omgivelser/ytre påvirkninger?"
     }, {
         quote:
             "Hva angir det første tallet i IP klassifisering?",
