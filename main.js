@@ -375,7 +375,7 @@ const quotes = [
         author: "Man fester en måleledning (ofte en PN-snelle) til jordingskinnen i fordelingen, drar denne med seg rundt i installasjonen, og måler motstanden mellom denne og jordingspunktene i installasjonen."
     },  {
         quote:
-            "Hva utføres en isolasjonsmåling i praksis?",
+            "Hvordan utføres en isolasjonsmåling i praksis?",
         author: "Man fester den ene målepinnen på jordingsskinnen, og den andre på fasen. Måle med 500V målespenning. Det skal måles mellom alle faser og jord. Koble fra overspenningsvern og ømfintlig utstyr i innstallasjonen."
     },  {
         quote:
