@@ -227,8 +227,8 @@ const quotes = [
         author: "A1"
     }, {
         quote:
-            "Hva er strømføringsevnen til en PFXP 3g1,5 klamret på vegg?",
-        author: "19,5A"
+            "Hva menes med strømføringsevnen til en kabel?",
+        author: "Hvor mye strøm en kabel kan lede uten å ta skade av det"
     }, {
         quote:
             " Hva er strømføringsevnen til PN i rør 3g2,5 i isolert vegg?",
@@ -303,8 +303,8 @@ const quotes = [
         author: "Vernets bryteevne skal være større eller lik største kortslutningsstrøm"
     }, {
         quote:
-            "Hvilken tabell i montørhåndboka kan brukes for å finne maks lengde som garanterer momentan utkobling av vernet?",
-        author: "Tabell side 165-166"
+            "Hva betyr momentan utkobling av vernet?",
+        author: "Det betyr at sikringen løser ut med en gang (innen 0,1 sek)"
     }, {
         quote:
             "På hvilket punkt i installasjonen gjelder everkets oppgitte kortslutningsverdier?",
@@ -321,6 +321,18 @@ const quotes = [
         quote:
             "Hvilke spesielle krav gjelder for stikkontakt for platetopp i en bolig?",
         author: "Det må monteres komfyrvakt"
+    }, {
+        quote:
+            "Hvor mange stikkontaktuttak skal det monteres bak TV (multimedia enheter) i en bolig?",
+        author: "Minimum seks uttak i henhold til (NEK400.823.537.301.6)"
+    }, {
+        quote:
+            "Hvor mange stikkontaktuttak skal det monteres i en stue i en bolig?",
+        author: "Minimum to uttak per hver fjerde påbegynte kvadratmeter (NEK400.823.537.301.2)"
+    }, {
+        quote:
+            "Hvor mange stikkontaktuttak skal det monteres ved kjøkkenbenk i en bolig?",
+        author: "Minimum to uttak per to meter kjøkkenbenk (NEK400.823.537.301.3)"
     }, {
         quote:
             "Hvilke krav gjelder for tilkobling av varmtvannsberedere i bolig?",
@@ -342,6 +354,10 @@ const quotes = [
             "Hvilket kapittel i NEK400 handler om områder med dusj?",
         author: "NEK400.701"
     },  {
+        quote:
+            "Hva omhandler kapittel 823 i NEK400?",
+        author: "Krav til elektriske installasjoner i boliger"
+    },{
         quote:
             "Hvilket kapittel i NEK400 handler om boliginstallasjoner?",
         author: "NEK400.823"
@@ -401,7 +417,23 @@ const quotes = [
         quote:
             "Hva er 'de fem sikre'?",
         author: "Det er et sett med standarisert dokumentasjon som tilfredstiller gjeldende krav til dokumentasjon."
-    },  
+    },   {
+        quote:
+            "Hva menes med begrepet bærekraft?",
+        author: "Å tilfredstille dagens behov uten å ødelegge for fremtidige generasjoners muligheter for å tilfredstille sitt behov."
+    },  {
+        quote:
+            "Hva menes med begrepet energieffektivisering?",
+        author: "Å oppnå likeverdig ytelse med mindre energi"
+    },  {
+        quote:
+            "Hva er NHO elektro og EL og IT-forbundet?",
+        author: "NHO elektro er arbeidsgiverorganisasjon som representerer bedrifter i elektrobransjen, mens EL og IT-forbundet er et fagforbund for ansatte i elektrobransjen."
+    }, {
+        quote:
+            "Hva menes med begrepet bedriftsdemokrati?",
+        author: "Det handler om arbeidstakernes rett til å medvirke i beslutninger om endringer på arbeidsplassen."
+    },    
 ];
 
 //Button Generate Quotes
