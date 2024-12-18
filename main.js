@@ -131,11 +131,11 @@ const quotes = [
         author: "En standard som gjelder for tilknytning av elektriske lavspenningsanlegg"
     }, {
         quote:
-            "Hvilken metode for tilknytning gjelder som oftest for boliger?",
+            "Hvilken metode for tilknytning gjelder i henhold til NEK399 som oftest for boliger?",
         author: "Metode A"
     }, {
         quote:
-            "Hvor mange ampere angir den øvre grensen for tilknytning metode A?",
+            "Hvor mange ampere angir den øvre grensen for tilknytning metode A i henhold til NEK399?",
         author: "125A"
     }, {
         quote:
@@ -147,7 +147,7 @@ const quotes = [
         author: "Nett og anlegg"
     }, {
         quote:
-            "Hvilke vern skal plasseres i feltet for elkraft?",
+            "Hvilke vern skal plasseres i feltet for elkraft i henhold til NEK399?",
         author: "Kortslutningsvern, overspenningsvern og overstrømsvern (avgreining eller utvidete tilknytningsskap)"
     }, {
         quote:
