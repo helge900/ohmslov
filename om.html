@@ -8,9 +8,90 @@
     <meta name="author" content="Helge Hovtun">
     <title>Om ohmslov.no</title>
     <link rel="icon" href="ohmtegn1.png">
-    <link rel="stylesheet" href="./style.css">
+ 
 
 </head>
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+#containerOm{
+
+   padding-top: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-bottom: 10px;
+   text-align: center;
+   margin: 0 auto;
+   zoom: auto;
+   max-width: 500px;
+   
+}
+
+
+#containerHeader{
+
+    padding-left: 15px;
+
+}
+
+
+.dropdown{
+    display: inline-block;
+    
+}
+.dropdown button{
+    background-color: hsl(0, 0%, 80%);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(222, 222, 222);
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    border-radius: 20px;
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: hsl(0, 0%, 70%);
+}
+.dropdown a:hover{
+    background-color: hsl(0, 0%, 90%);
+}
+
+
+footer {
+    
+    text-align: center;
+    padding: 30px;
+  }
+</style>
+
 <body>
 
   <div id="containerHeader">
@@ -19,26 +100,20 @@
     <div class="dropdown">
         <button>Mer</button>
         <div class="content">
-            
-            <a href="index.html">Forsiden</a>
+
+            <a href="index.html">Spørsmålsgenerator</a>
             <a href="kabelogvern.html">Dokumentere kabel og vern</a>
-            <a href="om.html">Om ohmslov.no</a>
+            <a href="makslengde.html">Tabell for maks lengde</a>
+            <a href="om.html">Om</a>
         </div>
         
-
-    </div>
 
 </div> 
 
 
     <div id="containerOm">
       <h1>Spørsmål du kan få på fagprøven for elektrikere</h1>
-      <p>Fagprøven i elektrikerfaget avsluttes som regel med en oppsummerende samtale om prøven. Noen kaller det utspørring, 
-        andre kaller det grilling. 
-      </p>
-
-
-
+    
         <h2>Om ohmslov.no</h2>
         <p>Ohmslov.no er en generator for spørsmål som ligner de du kan få av sensor på fagprøven. Spørsmålene tar
           utgangspunkt i læreplanen og tar sikte på dekke det mest grunnleggende.   
@@ -47,13 +122,9 @@
            <p>Generatoren er gratis å bruke, krever ingen innlogging eller app. Det skal være et enkelt og tilgjengelig hjelpemiddel
             for å trene på spørsmålene en kan få. </p>
           
-      <h2>Gi gass!</h2>
-      <p> Det sies at suksess er forberedelse som møter mulighet. 
-        Nå er muligheten her, så forbered deg så godt du kan. Forhåpentligvis kan dette hjelpemiddelet være til hjelp. Lykke til! 
-       </p>
 
-            <p>Mvh Helge Hovtun - <a href= "mailto: helge@hovtun.no"> 
-              helge@hovtun.no
+            <p>2025 © <a href= "mailto: helge@hovtun.no"> 
+              Helge Hovtun
            </a></p>
         <p> Versjon under utvikling<br>
         <img src="logoohmslov.png" alt="ohmslov.no" width="auto" height="50px"><br>
@@ -72,7 +143,25 @@
     
         </div>
 
-    <script src="./main.js"></script>
+
+    <script>
+        // Gjør dropdownen klikkbar (åpne/lukke)
+        document.querySelectorAll('.dropdown > button').forEach(button => {
+          button.addEventListener('click', function (e) {
+            e.stopPropagation(); // Hindrer bubbling
+            const parent = this.parentElement;
+            parent.classList.toggle('active');
+          });
+        });
+      
+        // Lukk dropdown om man klikker utenfor
+        document.addEventListener('click', function () {
+          document.querySelectorAll('.dropdown').forEach(drop => {
+            drop.classList.remove('active');
+          });
+        });
+      </script>
+
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>

@@ -1,17 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="no">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fagprøve spørsmål generator">
     <meta name="keywords" content="fagprøve, sensor, spørsmål, elektro, elektrofag, elektriker, NEK400, FEL, fagbrev, maks, maksimal, lengde, tabell">
     <meta name="author" content="Helge Hovtun">
     <title>Tabell for maks lengde</title>
     <link rel="icon" href="ohmtegn1.png">
-    <link rel="stylesheet" href="./style2.css">
+    
 </head>
+<style>
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+
+#container{
+    padding-left: 10px;
+    padding-right: 10px;
+    border: black;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+}
+
+
+
+.dropdown{
+    display: inline-block;
+    
+}
+.dropdown button{
+    background-color: hsl(0, 0%, 80%);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(222, 222, 222);
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    border-radius: 20px;
+}
+.dropdown.active .content {
+    display: block;
+}
+.dropdown:hover button{
+    background-color: hsl(0, 0%, 70%);
+}
+.dropdown a:hover{
+    background-color: hsl(0, 0%, 90%);
+}
+
+
+
+footer {
+    
+    text-align: center;
+    padding: 30px;
+  }
+  html, body {
+    -webkit-text-size-adjust: 100%; /* Forhindrer font-zoom-issues i Safari */
+}
+</style>
 <body>
 
     <div id="containerHeader">
@@ -20,10 +96,12 @@
             <button>Mer</button>
             <div class="content">
     
-                <a href="index.html">Forside</a>
+                <a href="index.html">Spørsmålsgenerator</a>
                 <a href="kabelogvern.html">Dokumentere kabel og vern</a>
-                <a href="om.html">Om ohmslov.no</a>
+                <a href="makslengde.html">Tabell for maks lengde</a>
+                <a href="om.html">Om</a>
             </div>
+            
             
     
         </div>
@@ -35,7 +113,7 @@
         <p>Tallene i tabellen er den maksimale lengden en kabel kan være som 
             sikrer momentan utkobling av det aktuelle vernet ved en kortslutning. Avlest tall er oppgitt i meter. Les av kolonnen som 
             gjelder for oppgitt kortslutningsstrøm i kursen startpunkt, der vernet monteres.    
-        Tabellen gjelder for både IT-nett og TN-nett så lenge det er montert jordfeilvern på kursen. 
+        Tabellen gjelder for både IT-nett og TN-nett så lenge det er beskyttet med jordfeilvern. 
             Verdiene er regnet ved hjelp av Febdok, og gjelder for PVC/CU-kabler. <p></p> 
             De tre kolonnene ytterst til høyre referer til maksimal lengde som ivaretar NEK400.525 sin anbefaling om maks 5% spenningsfall. 
             Verdien tar utgangspunkt i maks belastet kurs.         </p>
@@ -63,6 +141,27 @@
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+
+<script>
+    // Gjør dropdownen klikkbar (åpne/lukke)
+    document.querySelectorAll('.dropdown > button').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.stopPropagation(); // Hindrer bubbling
+        const parent = this.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  
+    // Lukk dropdown om man klikker utenfor
+    document.addEventListener('click', function () {
+      document.querySelectorAll('.dropdown').forEach(drop => {
+        drop.classList.remove('active');
+      });
+    });
+  </script>
+  
+
 
 </body>
 
