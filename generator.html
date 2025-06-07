@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="description" content="Fagprøve spørsmål generator">
+      <meta name="keywords" content="fagprøve, sensor, spørsmål, elektro, elektrofag, elektriker, NEK400, FEL, fagbrev">
+      <meta name="author" content="Helge Hovtun">
+      <link rel="icon" href="ohmtegn1.png">
+    
+
+
+  <title>Spørsmål du kan få på fagprøven i elektrikerfaget</title>
+ 
+</head>   
+
+ <style>
+   
+   body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+
+    }
+
+    #question {
+      font-size: 30px;
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin: 100 auto;
+    }
+
+    #answer {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #new-question-btn,
+    #show-answer-btn {
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .spinner {
+      margin: 20px auto;
+      width: 40px;
+      height: 40px;
+      border: 4px solid #ccc;
+      border-top: 4px solid #4caf50;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      display: none;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+   
+
+
+
+#container {
+    padding-top: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: black;
+    min-height: 300px; /* Byttet ut height med min-height */
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+}
+
+#container2{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+    height: auto;
+}
+
+
+
+#container4{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: black;
+    height: 120px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 350px;
+}
+
+
+
+
+.generate{
+    margin: 20px auto;
+    height: 80px;
+    width: 250px;
+    font-size: 21px;
+    color:rgb(0, 0, 0);
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(121, 255, 255);
+    cursor: pointer;
+}
+
+.generate:hover{
+    background-color: rgb(0, 255, 255);
+}
+
+.generate:active{
+    background-color: rgb(121, 255, 255);
+}
+
+.generate2{
+    background-color: hsl(0, 0%, 80%);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(222, 222, 222);
+}
+
+.dropdown{
+    display: inline-block;
+    padding-left: 7px;
+    
+}
+.dropdown button{
+    background-color: hsl(0, 0%, 80%);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(222, 222, 222);
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    border-radius: 20px;
+}
+.dropdown.active .content {
+  display: block;
+}
+.dropdown:hover button{
+    background-color: hsl(0, 0%, 70%);
+}
+.dropdown a:hover{
+    background-color: hsl(0, 0%, 90%);
+}
+
+:root {
+    touch-action: pan-x pan-y;
+    height: 100% 
+  }
+
+footer {
+    
+    text-align: center;
+    padding: 30px;
+  }
+
+  </style>
+
+<body>
+   
+      <div class="dropdown">
+          <button>Mer</button>
+          <div class="content">
+  
+              <a href="index.html">Spørsmålsgenerator</a>
+              <a href="kabelogvern.html">Dokumentere kabel og vern</a>
+              <a href="makslengde.html">Tabell for maks lengde</a>
+              <a href="om.html">Om</a>
+          </div>
+          
+          
+  
+      </div>
+ 
+  
+  
+  
+      <div id="container">
+        
+
+  
+          <div id="spinner" class="spinner"></div>
+  
+          <p id="question"></p>
+          <p></p>
+          <p id="answer"></p>
+        
+          
+          </p>
+      </div>
+  
+      <div id="container2">
+        <button id="new-question-btn" class="generate">Nytt spørsmål</button>
+        
+        <p></p>
+
+    
+           
+            <button id="show-answer-btn" class="generate2">Trykk for løsningshjelp</button>
+      
+      </div>
+  
+          
+          
+          
+     
+     
+        
+      <div id="container4">
+        
+      <h2>Spørsmål du kan få av sensor på fagprøven i elektrikerfaget</h2>
+  <p><br></p>
+          
+      <p> Versjon under utvikling<br>
+          <img src="logoohmslov.png" alt="ohmslov.no" width="auto" height="50px"><br>
+          <a href="https://www.ohmslov.no/"> 
+              ohmslov.no</a></p> 
+              <p><br></p>
+    </div>
+
+</body>
+
+              <script>
+                const questions = [
+                { 
+        quote:
+             "Hva er forskjellen mellom en lov, en forskrift og en standard?",
+        author: "En lov er vedtatt av Stortinget, en forskrift er vedtatt av regjeringen, og en standard er utformet av bransjen."
+    },
+    {
+        quote:
+            "Hva heter forskriften som elektriske anlegg skal bygges etter?",
+        author: "FEL - Forskrift for elektriske lavspenningsanlegg"
+    },    {
+        quote:
+            "Hvilke standarder og forskrifter må følges ved utførelse av elektriske anlegg?",
+        author: "FEL og NEK400"
+    },
+    {
+        quote:
+            "Hva står FEL for?",
+        author: "Forskrift for elektriske lavspenningsanlegg"
+    },
+    {
+        quote:
+            "Hva står i FEL§16?",
+        author: "Elektriske anlegg skal planlegges og utføres slik at mennesker, husdyr og eiendom er beskyttet mot fare og skader ved normal bruk og slik at anlegget blir egnet til den forutsatte bruk."
+    },
+    {
+        quote: "Hvor mange deler er NEK400 delt inn i?",
+        author: "8"
+    },
+    {
+        quote:
+            "Hvilken del i NEK400 omhandler sluttkontroll og verifikasjon? ",
+        author: "Del 6"
+    },
+     {
+        quote:
+            "Hva omhandler del 6 i Nek400? ",
+        author: "Verifikasjon"
+    },
+     {
+        quote:
+            "Hva omhandler del 7 i NEK400?",
+        author: "Krav til spesielle installasjoner, for eksempel bad, lading av elbil og landbruksinstallasjoner."
+    },
+     {
+        quote:
+            "Hvilke deler i NEK400 omhandler krav til spesielle installasjoner? ",
+        author: "Del 7 og del 8"
+    },
+    {
+        quote:
+            "Hva er forkortelsen vi ofte bruker for forskrift om sikkerhet ved arbeid i og drift av elektriske anlegg?",
+        author: "FSE"
+    }, 
+     {
+        quote:
+            "Hva står FSE for? ",
+        author: "Forskrift om sikkerhet ved arbeid i og drift av elektriske anlegg"
+    },
+    {
+        quote:
+            "Hvor ofte skal man ha FSE-kurs?",
+        author: "Minimum hver 12. måned"
+    },
+    {
+        quote:
+            "I hvilken paragraf i FSE kan man lese om arbeid på frakoblet anlegg?",
+        author: "Paragraf 14"
+    },
+    {
+        quote:
+            "Hva sier FSE §14 at du må gjøre før du begynner å jobbe på et frakoblet anlegg?",
+        author: "Koble fra, sikre mot innkobling, og måle."
+    },
+    {
+        quote:
+            "I Norge brukes 3 ulike nettsystem, hva er navnet på disse?",
+        author: "IT, TN og TT"
+    } , {
+        quote:
+            "Hva står bokstavene IT for?",
+        author: "Isolert og Terra"
+    }, {
+        quote:
+            "Hva står bokstavene TN for?",
+        author: "Terra og Nøytral"
+    }, {
+        quote:
+            "Hvilken spenning måles mellom fase og fase i TN-nett?",
+        author: "400V"
+    }, {
+        quote:
+            "Hvilken spenning måles mellom fase og jord i IT-nett?",
+        author: "133V"
+    }, {
+        quote:
+            "Hvilken spenning måles mellom fase og nøytral i TN-nett?",
+        author: "230V"
+    }, {
+        quote:
+            "Hvilken spenning måles mellom nøytral og jord i TN-nett?",
+        author: "0V"
+    }, {
+        quote:
+            "Hva er fordelene med å bytte fra IT-nett til TN-nett?",
+        author: "Bl.a. høyere effekt på samme tverrsnitt, mer brannsikkert, mindre stående jordfeiler, både 400V og 230V tilgjengelig."
+    }, {
+        quote:
+            "Hvor skal PEN-leder splittes?",
+        author: "I første fordeling, som regel i TKS."
+    }, {
+        quote:
+            "Hva er hensikten med jording?",
+        author: "Forsikre samme potensiale i ledende deler, skape vei for feilstrøm utenom mennesker og dyr, og avlede overspenninger."
+    }, {
+        quote:
+            "Hva er en jordelektrode?",
+        author: "En jordingsleder som skaper kontakt med jorden og jordingsanlegget."
+    }, {
+        quote:
+            "Hva er en utsatt ledende del?",
+        author: "Del av metall til utstyr som er en del av det elektriske anlegget, men som normalt ikke er spenningssatt. For eksempel dekselet på en panelovn."
+    }, {
+        quote:
+            "Hvilken standard gjelder for tilknytning av elektriske lavspenningsanlegg?",
+        author: "NEK 399"
+    }, {
+        quote:
+            "Hva er NEK399?",
+        author: "En standard som gjelder for tilknytning av elektriske lavspenningsanlegg"
+    }, {
+        quote:
+            "Hvilken metode for tilknytning gjelder i henhold til NEK399 som oftest for boliger?",
+        author: "Metode A"
+    }, {
+        quote:
+            "Hvor mange ampere angir den øvre grensen for tilknytning metode A i henhold til NEK399?",
+        author: "125A"
+    }, {
+        quote:
+            "Hvor mange felter skal et tilknytningsskap minimum ha? Og hva hører til i disse feltene?",
+        author: "Minimum tre felt; felt for måler, elkraft og ekom."
+    }, {
+        quote:
+            "Hvordan skal målersløyfen merkes?",
+        author: "Nett og anlegg"
+    }, {
+        quote:
+            "Hvilke vern skal plasseres i feltet for elkraft i henhold til NEK399?",
+        author: "Kortslutningsvern, overspenningsvern og overstrømsvern (avgreining eller utvidete tilknytningsskap)"
+    }, {
+        quote:
+            "Skal tilknytningsskap bygget etter metode A være utformet for ussakkyndig betjening?",
+        author: "Ja, i henhold til NEK399"
+    }, {
+        quote:
+            "I forbindelse med overspenningsvern; hva menes med tennspenning?",
+        author: "Det er spenningsnivået som gjør at overspenningsvernet åpner forbindelse til jord."
+    }, {
+        quote:
+            "Hvordan fungerer et overspenningsvern (enkelt forklart)?",
+        author: "Dersom spenningen stiger over et visst nivå, åpner overspenningsvernet en forbindelse til jord."
+    }, {
+        quote:
+            "Hva forsårsaker overspenninger?",
+        author: "Lyn (atmosfæriske overspenninger), og inn- og utkobling av store belastninger (koblingsoverspenninger)."
+    }, {
+        quote:
+            "Hva er kravet til minste varige driftspenning på overspenningsvern i IT-nett?",
+        author: "350V"
+    }, {
+        quote:
+            "Hva er kravet til overspenningsvernets minste varige driftspenning i TN-nett?",
+        author: "1,1 * 230V"
+    }, {
+        quote:
+            "Når man kobler overspenningsvern, er det viktig med lange eller korte ledere?",
+        author: "Korte ledere og minst mulig svinger"
+    }, {
+        quote:
+            "Hva angir en automatsikrings I2-verdi?",
+        author: "Det angir øvre prøvestrøm, altså hvor mye strøm som kan gå før vernet garantert har koblet ut innen en time."
+    }, {
+        quote:
+            "Hva angir en automatsikrings I5-verdi?",
+        author: "Det angir strømverdi som garanterer momentan utkobling."
+    }, {
+        quote:
+            "Enkelt forklart; Hvordan virker en jordfeilbryter?",
+        author: "Den måler at den får samme strøm tilbake som den slipper gjennom. Ved avvik tyder det på jordfeil og vernet løser ut."
+    }, {
+         quote:
+            "Hva er kravet til utløserstrøm for jordfeilvern installert i bolig?",
+        author: "30mA"
+    }, {
+        quote:
+            "Hva er et “Type-B” jordfeilvern?",
+        author: "Det er et jordfeilvern som kan detektere DC jordfeilstrømmer i tillegg til AC jordfeilstrømmer"
+    }, {
+        quote:
+            "Er det krav til bruk av jordfeilvern i boliger?",
+        author: "Ja, så lenge man benytter automatisk utkobling som beskyttelsesmetode"
+    }, {
+        quote:
+            "Hvilken tabell i NEK400 handler om installasjonsmetoder?",
+        author: "Tabell 52A"
+    }, {
+        quote:
+            "I hvilken tabell i NEK400 finner du ulike kablers strømføringsevner?",
+        author: "Tabell 52B"
+    }, {
+        quote:
+            "Hva kan du finne i NEK400 tabell 52B?",
+        author: "Strømføringsevner"
+    }, {
+        quote:
+            "Er en PR-kabel en dobbelisolert kabel?",
+        author: "Nei, dobbelisolerte kabler har isolert jordleder"
+    }, {
+        quote:
+            "Hvilken ref.inst.metode er kabel klamret på vegg?",
+        author: "C"
+    }, {
+        quote:
+            "Hvilken ref.inst.metode er PN trukket i rør i isolert vegg?",
+        author: "A1"
+    }, {
+        quote:
+            "Hva menes med 'strømføringsevnen til en kabel'?",
+        author: "Hvor mye strøm en kabel kan lede uten å ta skade av det"
+    }, {
+        quote:
+            " Hva er strømføringsevnen til PN i rør 3g2,5 i isolert vegg?",
+        author: "19,5A"
+    }, {
+        quote:
+            "Hvilken tabell i NEK400 angir klassifiseringer for omgivelser/ytre påvirkninger?",
+        author: "Tabell 51A"
+    }, {
+        quote:
+            "Hva kan du finne i NEK400 tabell 51A?",
+        author: "Klassifiseringer for omgivelser/ytre påvirkninger?"
+    }, {
+        quote:
+            "Hva angir det første tallet i IP klassifisering?",
+        author: "Tetthet mot faste legemer/partikler."
+    }, {
+        quote:
+            "Hva angir det andre tallet i IP klassifisering?",
+        author: "Tetthet mot vann"
+    }, {
+        quote:
+            "Hva er i normale tilfeller kravet til minimum IP-grad?",
+        author: "IP2X"
+    }, {
+        quote:
+            "Hva er navnet på den mest brukte beskyttelsesmetoden mot elektrisk sjokk?",
+        author: "Automatisk utkobling (NEK400.411)"
+    }, {
+        quote:
+            "Er man absolutt nødt til å alltid bruke jordfeilbryter?",
+        author: "Nei, man kan blant annet velge en annen beskyttelsesmetode mot elektrisk sjokk, f.eks. dobbel/forsterket isolasjon, elektrisk adskillelse eller lav-volt (SELV/PELV)."
+    }, {
+        quote:
+            "Hvorfor skal som regel målersløyfen i IT-nett dobbelisoleres?",
+        author: "Den skal dobbelisoleres fordi den skal være beskyttet mot elektrisk sjokk ved feil. I mangel på jf-vern i foranliggende nett kan man løse dette med dobbelisolerte kabler."
+    }, {
+        quote:
+            "Hva er det generelle kravet til beskyttelse mot overbelastning?",
+        author: "Ib≤In≤Iz og I2≤1,45*Iz"
+    }, {
+        quote:
+            "Hva er I5-verdien på en C-automat?",
+        author: "10*In"
+    }, {
+        quote:
+            "Hva er I5-verdien på en B-automat?",
+        author: "5*In"
+    }, {
+        quote:
+            "Er PFXP en dobbelisolert kabel?",
+        author: "Ja, kabler med isolert jordleder er dobbelisolert"
+    }, {
+        quote:
+            "Hva er kravet til beskyttelse mot overbelastning i bolig?",
+        author: "Ib≤In og I2≤Iz"
+    }, {
+        quote:
+            "Hva er I2-verdien til en 16A/C jordfeilautomat?",
+        author: "1.45*16=23,2A"
+    }, {
+        quote:
+            "Hva er I2-verdien til en 13A/B jordfeilautomat?",
+        author: "1,45*13=18,85A"
+    }, {
+        quote:
+            "Hva er I2-verdien på en Eaton 15A/C OL (boligautomat) jordfeilautomat?",
+        author: "1,3*15=19,5A"
+    }, {
+        quote:
+            "Hva er kravet til vernets bryteevne?",
+        author: "Vernets bryteevne skal være større enn eller lik største kortslutningsstrøm"
+    }, {
+        quote:
+            "Hva betyr 'momentan utkobling av vernet'?",
+        author: "Det betyr at sikringen løser ut med en gang (innen 0,1 sek)"
+    }, {
+        quote:
+            "På hvilket punkt i installasjonen gjelder everkets oppgitte kortslutningsverdier?",
+        author: "På tampen av stikkledningen"
+    },  {
+        quote:
+            "Vil spenningsfallet være størst dersom det går mye eller lite strøm i kretsen?",
+        author: "Det vil være større dersom det går mye strøm i kretsen."
+    }, {
+        quote:
+            "Hva er anbefalt maksimalt spenningsfall i prosent for en forbrukerkurs?",
+        author: "5%"
+    }, {
+        quote:
+            "Hvilke spesielle krav gjelder for stikkontakt for platetopp i en bolig?",
+        author: "Det må monteres komfyrvakt"
+    }, {
+        quote:
+            "Hvor mange stikkontaktuttak skal det monteres bak TV (multimedia enheter) i en bolig?",
+        author: "Minimum seks uttak i henhold til (NEK400.823.537.301.6)"
+    }, {
+        quote:
+            "Hvor mange stikkontaktuttak skal det monteres i en stue i en bolig?",
+        author: "Minimum to uttak per hver fjerde påbegynte kvadratmeter (NEK400.823.537.301.2)"
+    }, {
+        quote:
+            "Hvor mange stikkontaktuttak skal det monteres ved kjøkkenbenk i en bolig?",
+        author: "Minimum to uttak per to meter kjøkkenbenk (NEK400.823.537.301.3)"
+    }, {
+        quote:
+            "Hvilke krav gjelder for tilkobling av varmtvannsberedere i bolig?",
+        author: "I bolig skal varmtvannsberedere over 1500W skal være fast tilkoblet eller via rundstift plugg og kontakt"
+    }, {
+        quote:
+            "Regnes området rundt vask på bad som våtsone av NEK400?",
+        author: "Nei, området rundt vask regnes ikke som våtsone av NEK400, men det gjør det derimot av byggeteknisk forskrift (TEK17)."
+    },  {
+        quote:
+            "Stilles det strengest krav til utstyret når det er montert i sone 0 eller sone 2 på bad?",
+        author: "Sone 0 stiller strengest krav"
+    },  {
+        quote:
+            "Er det lov å montere stikkontakter i dusjen?",
+        author: "Nei, stikkontakter kan i utgangspunktet utelukkende monteres utenfor våtsoner."
+    },  {
+        quote:
+            "Hvilket kapittel i NEK400 handler om områder med dusj?",
+        author: "NEK400.701"
+    },  {
+        quote:
+            "Hva kan du lese om i kapittel 823 i NEK400?",
+        author: "Krav til elektriske installasjoner i boliger"
+    }, {
+        quote:
+            "Hvilket kapittel i NEK400 handler om boliginstallasjoner?",
+        author: "NEK400.823"
+    },  {
+        quote:
+            "Hvilket kapittel i NEK400 handler om lading av elbil?",
+        author: "NEK400.722"
+    },  {
+        quote:
+            "Hva er kravet til minimum IP-grad til elbilladere?",
+        author: "IP44"
+    },  {
+        quote:
+            "Hva kan du lese om i NEK400 del 6?",
+        author: "Verifikasjon (sluttkontroll)"
+    },  {
+        quote:
+            "Hvilken måling skal utføres først: kontinuitetsmåling eller isolasjonsmåling?",
+        author: "Kontinuitetsmåling først"
+    },  {
+        quote:
+            "Hva måler du når du foretar en kontinuitetsmåling?",
+        author: "Du måler om beskyttelsesjordleder er tilkoblet og ubrutt i hele sin lengde"
+    },  {
+        quote:
+            "Hva måler du når du foretar en isolasjonsmåling?",
+        author: "Du måler om det er lekkasje fra faseledere til jord"
+    }, {
+        quote:
+            "Hvordan utføres en kontinuitetsmåling i praksis?",
+        author: "Man fester en måleledning (ofte en PN-snelle) til jordingskinnen i fordelingen, drar denne med seg rundt i installasjonen, og måler motstanden mellom denne og jordingspunktene i installasjonen."
+    },  {
+        quote:
+            "Hvordan utføres en isolasjonsmåling i praksis?",
+        author: "Man fester den ene målepinnen på jordingsskinnen, og den andre på fasen. Måle med 500V målespenning. Det skal måles mellom alle faser og jord. Koble fra overspenningsvern og ømfintlig utstyr i innstallasjonen."
+    },  {
+        quote:
+            "Hva er kravet til kontinuitetsmåling?",
+        author: "Kravet er at det skal være samsvar mellom målt verdi, og lederens lengde og tverrsnitt."
+    },  {
+        quote:
+            "Hva er kravet til isolasjonsmåling?",
+        author: "Mer enn 1MΩ"
+    }, {
+        quote:
+            "Hva er kravet til målespenning ved en isolasjonsmåling av 230V anlegg?",
+        author: "500V"
+    },  {
+        quote:
+            "Hva er en samsvarserklæring?",
+        author: "Det er en garanti om at det elektriske anlegget er bygget i henhold til gjeldende regelverk"
+    },  {
+        quote:
+            "Hva består 'de fem sikre' av?",
+        author: "Rapport fra risikovurdering, rapport fra sluttkontroll, samsvarserklæring, kursfortegnelse og utstyrsdokumentasjon (FDV og bruksanvisninger)"
+    },  {
+        quote:
+            "Hva er 'de fem sikre'?",
+        author: "Det er et sett med standarisert dokumentasjon som tilfredstiller gjeldende krav til dokumentasjon."
+    },   {
+        quote:
+            "Hva menes med begrepet 'bærekraft'?",
+        author: "Å tilfredstille dagens behov uten å ødelegge for fremtidige generasjoners muligheter for å tilfredstille sitt behov."
+    },  {
+        quote:
+            "Hva menes med begrepet 'energieffektivisering'?",
+        author: "Å oppnå likeverdig ytelse med mindre energi"
+    },  {
+        quote:
+            "Hva er NHO elektro og EL og IT-forbundet?",
+        author: "NHO elektro er arbeidsgiverorganisasjon som representerer bedrifter i elektrobransjen, mens EL og IT-forbundet er et fagforbund for ansatte i elektrobransjen."
+    }, {
+        quote:
+            "Hva menes med begrepet 'bedriftsdemokrati'?",
+        author: "Det handler om arbeidstakernes rett til å medvirke i beslutninger om endringer på arbeidsplassen."
+    }, 
+                ];
+              
+                let quizCompleted = false;
+
+                let shuffledQuestions = [];
+                let currentQuestionIndex = 0;
+                let currentQuestion = null;
+
+
+    
+                
+                function shuffle(array) {
+                  for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                  }
+                }
+              
+                function resetQuiz() {
+                  // Setter startmeldingen tilbake
+                  questionElement.textContent = "Trykk på den blå knappen";
+                  answerElement.textContent = "";
+                }
+              
+                function startQuiz() {
+  shuffledQuestions = [...questions];
+  shuffle(shuffledQuestions);
+  currentQuestionIndex = 0;
+  quizCompleted = false; // Tilbakestill
+  showAnswerButton.disabled = false;
+
+  showQuestion();
+}
+
+
+              
+function showQuestion() {
+  currentQuestion = shuffledQuestions[currentQuestionIndex];
+  questionElement.textContent = currentQuestion.quote;
+  answerElement.textContent = "";
+}
+
+              
+function showAnswer() {
+  if (currentQuestion) {
+    answerElement.textContent = currentQuestion.author;
+  }
+}
+
+              
+                function nextQuestion() {
+  // Hvis quizen er ferdig og brukeren trykker igjen → restart
+  if (quizCompleted) {
+    startQuiz();
+    return;
+  }
+
+  // Hvis vi har vist siste spørsmål
+  if (currentQuestionIndex >= shuffledQuestions.length) {
+    questionElement.textContent = "Takk for at du bruker generatoren! Du har nå rundet alle spørsmålene.";
+    answerElement.textContent = "2025 © Helge Hovtun";
+    quizCompleted = true;
+
+    showAnswerButton.disabled = true;
+
+
+    return;
+  }
+
+  showQuestion();
+
+  // ⬇️ Flytt denne ned hit så spørsmål og svar matcher
+  currentQuestionIndex++;
+}
+
+
+
+              
+                const questionElement = document.getElementById("question");
+                const answerElement = document.getElementById("answer");
+                const newQuestionButton = document.getElementById("new-question-btn");
+                const showAnswerButton = document.getElementById("show-answer-btn");
+                const spinner = document.getElementById("spinner");
+              
+                newQuestionButton.addEventListener("click", () => {
+                  spinner.style.display = "block";
+                  questionElement.textContent = "";
+                  answerElement.textContent = "";
+              
+                  setTimeout(() => {
+                    spinner.style.display = "none";
+                    nextQuestion();
+                  }, 300);
+                });
+              
+                showAnswerButton.addEventListener("click", showAnswer);
+              
+                // 🚀 Starter quizen med reset hver gang siden lastes
+                window.onload = () => {
+  questionElement.textContent = "Trykk på den blå knappen";
+  answerElement.textContent = "";
+  shuffledQuestions = [...questions];
+  shuffle(shuffledQuestions);
+  currentQuestionIndex = 0;
+};
+
+// Gjør alle dropdowns interaktive med klikk
+document.querySelectorAll('.dropdown > button').forEach(button => {
+  button.addEventListener('click', function () {
+    const parent = this.parentElement;
+    parent.classList.toggle('active'); // Legg til eller fjern .active
+  });
+});
+
+// Valgfritt: Lukk hvis man klikker utenfor dropdown
+document.addEventListener('click', function (event) {
+  document.querySelectorAll('.dropdown').forEach(drop => {
+    if (!drop.contains(event.target)) {
+      drop.classList.remove('active');
+    }
+  });
+});
+
+
+ </script>
+              
+            
+
+              <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+              <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+
+</html>
